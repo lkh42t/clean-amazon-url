@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clean Amazon URL</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Roboto&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1 class="mdc-typography mdc--headline1">Clean Amazon URL</h1>
+
+    <label class="mdc-text-field mdc-text-field--filled">
+      <span class="mdc-text-field__ripple"></span>
+      <span class="mdc-floating-label" id="url-label">URL</span>
+      <input
+        type="url"
+        class="mdc-text-field__input"
+        id="url-input"
+        pattern="https://www\.amazon\.co.*/dp/.+"
+        required
+        aria-labelledby="url-label"
+      />
+      <span class="mdc-line-ripple"></span>
+    </label>
+
+    <button class="mdc-button mdc-button--outlined" id="clean-button">
+      <span class="mdc-button__ripple"></span>
+      <span class="mdc-button__label">Clean</span>
+    </button>
+
+    <div class="mdc-typography" id="cleaned-url"></div>
+    <button class="mdc-icon-button material-icons" id="copy-button">
+      <div class="mdc-icon-button__ripple"></div>
+      content_copy
+    </button>
+
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

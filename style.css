@@ -1,0 +1,12 @@
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#clean-button,
+#cleaned-url {
+  margin-top: 16px;
+}
