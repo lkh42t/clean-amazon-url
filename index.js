@@ -1,7 +1,7 @@
 function cleanURL(s) {
   try {
     const url = new URL(s);
-    const p = url.pathname.split("/");
+    const p = url.pathname.replace(/\/gp\/(?:product|aw\/d)\//, "/dp/").split("/");
     const i = p.indexOf("dp") + 1;
     if (i <= 0) {
       return `${s} is not an Amazon product's URL.`;
