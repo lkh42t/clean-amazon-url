@@ -6,7 +6,7 @@ function cleanURL(s) {
     if (i <= 0) {
       return `${s} is not an Amazon product's URL.`;
     }
-    return `${url.origin}/dp/${p[i]}`;
+    return `${url.origin.replace("www.", "")}/dp/${p[i]}`;
   } catch (e) {
     return e.message;
   }
