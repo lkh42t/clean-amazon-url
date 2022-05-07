@@ -21,11 +21,19 @@
       <img src="img/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
     </a>
 
-    <h1 class="mdc-typography mdc--headline1">Clean Amazon URL</h1>
+    <h1 class="mdc-typography">Clean Amazon URL</h1>
 
-    <label class="mdc-text-field mdc-text-field--filled">
-      <span class="mdc-text-field__ripple"></span>
-      <span class="mdc-floating-label" id="url-label">URL</span>
+    <label
+      class="mdc-text-field mdc-text-field--outlined"
+      data-mdc-auto-init="MDCTextField"
+    >
+      <span class="mdc-notched-outline">
+        <span class="mdc-notched-outline__leading"></span>
+        <span class="mdc-notched-outline__notch">
+          <span class="mdc-floating-label" id="url-label">URL</span>
+        </span>
+        <span class="mdc-notched-outline__trailing"></span>
+      </span>
       <input
         type="url"
         class="mdc-text-field__input"
@@ -34,10 +42,13 @@
         required
         aria-labelledby="url-label"
       />
-      <span class="mdc-line-ripple"></span>
     </label>
 
-    <button class="mdc-button mdc-button--outlined" id="clean-button">
+    <button
+      class="mdc-button mdc-button--outlined"
+      id="clean-button"
+      data-mdc-auto-init="MDCRipple"
+    >
       <span class="mdc-button__ripple"></span>
       <span class="mdc-button__label">Clean</span>
     </button>
@@ -53,6 +64,9 @@
     </footer>
 
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script>
+      window.mdc.autoInit();
+    </script>
     <script src="index.js"></script>
   </body>
 </html>

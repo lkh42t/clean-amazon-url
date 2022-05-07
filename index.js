@@ -1,7 +1,9 @@
 function cleanURL(s) {
   try {
     const url = new URL(s);
-    const p = url.pathname.replace(/\/gp\/(?:product|aw\/d)\//, "/dp/").split("/");
+    const p = url.pathname
+      .replace(/\/gp\/(?:product|aw\/d)\//, "/dp/")
+      .split("/");
     const i = p.indexOf("dp") + 1;
     if (i <= 0) {
       return `${s} is not an Amazon product's URL.`;
@@ -10,11 +12,6 @@ function cleanURL(s) {
   } catch (e) {
     return e.message;
   }
-}
-
-const textFields = document.getElementsByClassName("mdc-text-field");
-for (const textField of textFields) {
-  mdc.textField.MDCTextField.attachTo(textField);
 }
 
 const urlInput = document.getElementById("url-input");
