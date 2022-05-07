@@ -6,6 +6,11 @@ body {
   align-items: center;
 }
 
+footer {
+  position: fixed;
+  bottom: 8px;
+}
+
 #gh-link {
   position: absolute;
   top: 0;
